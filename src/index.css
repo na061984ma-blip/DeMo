@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-cream: #FAF7F2;
+  --color-cream-soft: #F2ECE3;
+  --color-teal-deep: #0E3A3D;
+  --color-teal-mid: #164E52;
+  --color-turquoise: #0D9488;
+  --color-turquoise-bright: #14B8A6;
+  --color-mauve: #8D6A7B;
+  --color-mauve-soft: #F4EDF0;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+    background-color: #FAF7F2;
+    color: #0E3A3D;
+  }
+
+  h1, h2, .font-editorial {
+    font-family: var(--font-display);
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Custom subtle scrollbar for floor chips & horizontal strips */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
